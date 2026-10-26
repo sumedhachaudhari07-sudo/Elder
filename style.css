@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f7fb;
+    color: #172b4d;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 650px;
+    margin: auto;
+    padding: 22px 18px;
+}
+
+.topbar, .brand, .card-heading,
+.status-row, footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.brand {
+    justify-content: flex-start;
+}
+
+.logo {
+    background: #2563eb;
+    color: white;
+    padding: 13px 17px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.welcome {
+    padding: 25px 0;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #e5eaf2;
+}
+
+.muted, .feedback, footer {
+    color: #718096;
+    font-size: 12px;
+}
+
+.status-icon {
+    color: #d97706;
+    font-size: 24px;
+}
+
+.status-row {
+    padding: 13px 0;
+    border-top: 1px solid #e5eaf2;
+    font-size: 13px;
+}
+
+.actions {
+    display: grid;
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+.secondary {
+    background: white;
+    color: #172b4d;
+    border: 1px solid #e5eaf2;
+}
+
+.alert-card {
+    background: #fff1f0;
+    border: 1px solid #fecaca;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: #b91c1c;
+}
+
+.hidden {
+    display: none;
+}
+
+.info-card {
+    background: #eaf2ff;
+    padding: 18px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #718096;
+    text-align: center;
+}
+
+footer {
+    border-top: 1px solid #e5eaf2;
+    padding-top: 18px;
+}
+
+@media (max-width: 380px) {
+    .app {
+        padding: 15px 12px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}

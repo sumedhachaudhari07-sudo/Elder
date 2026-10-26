@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElderCare Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f6f9;
+            color: #243447;
+        }
+
+        header {
+            background: #087f8c;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+            padding: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .status {
+            color: #16834a;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #087f8c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #066873;
+        }
+
+        .danger {
+            background: #c62828;
+        }
+
+        .danger:hover {
+            background: #a51d1d;
+        }
+
+        #alertMessage {
+            font-weight: bold;
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #657786;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>💙 ElderCare</h1>
+    <p>Smart Elderly Fall Detection System</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>👋 Welcome</h2>
+        <p>Monitor elderly safety from your dashboard.</p>
+        <p>System Status: <span class="status">Dashboard Online</span></p>
+    </section>
+
+    <section class="card">
+        <h2>📡 Sensor Status</h2>
+        <p id="sensorStatus">Hardware not connected yet.</p>
+        <p>ESP8266 + MPU6050</p>
+    </section>
+
+    <section class="card">
+        <h2>🚨 Fall Detection</h2>
+        <p>Test the dashboard alert using the button below.</p>
+
+        <button class="danger" onclick="testFall()">
+            Test Fall Alert
+        </button>
+
+        <p id="alertMessage" role="status">
+            No test alert triggered.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>📞 Emergency Contact</h2>
+        <p>Add your trusted contact's phone number later.</p>
+        <p><strong>Contact:</strong> Not configured</p>
+    </section>
+
+</main>
+
+<footer>
+    ElderCare Project | Safety Through Technology 💙
+</footer>
+
+<script>
+    function testFall() {
+        document.getElementById("alertMessage").textContent =
+            "⚠️ TEST ALERT: Possible fall detected! Please check on the elderly person.";
+
+        document.getElementById("alertMessage").style.color = "#c62828";
+
+        alert("This is a TEST alert only. No real fall was detected.");
+    }
+</script>
+
+</body>
+</html>
